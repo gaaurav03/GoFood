@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# GoFood - Food Ordering Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GoFood is a food ordering platform built on the MERN stack (MongoDB, Express, React, Node.js), similar to platforms like Zomato. This guide will walk you through setting up and running the project on your local machine.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before you begin, make sure you have the following installed:
 
-### `npm start`
+- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [MongoDB](https://www.mongodb.com/)
+- [Git](https://git-scm.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone the Repository
 
-### `npm test`
+Start by cloning the project repository from GitHub:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/your-username/gofood.git
+cd gofood
+2. Install Dependencies
+Navigate into the project folders and install dependencies for both the backend and frontend:
 
-### `npm run build`
+Backend (API server):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+cd backend
+npm install
+Frontend (React app):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+bash
+Copy code
+cd ../frontend
+npm install
+3. Set Up Environment Variables
+Create an .env file in the backend folder with the following environment variables:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+env
+Copy code
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+JWT_SECRET=your_jwt_secret
+Replace your_mongodb_connection_string and your_jwt_secret with your actual MongoDB URI and a secure JWT secret.
 
-### `npm run eject`
+4. Start the Development Servers
+Start the backend server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+Copy code
+cd ../backend
+npm run dev
+In a new terminal window, start the frontend server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+cd ../frontend
+npm start
+5. Access the Application
+Once both servers are running, you can access the GoFood application at:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+arduino
+Copy code
+http://localhost:3000
+Additional Scripts
+Backend: npm run dev - Starts the backend server with live reloading.
+Frontend: npm start - Starts the frontend in development mode.
+Technologies Used
+Frontend: React, Redux, CSS
+Backend: Node.js, Express
+Database: MongoDB
